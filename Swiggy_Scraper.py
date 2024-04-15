@@ -24,12 +24,12 @@ headers = {
     'user-agent': 'Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36',
 }
 
-# Set initial parameters
+# Customize Parameters
 params = {
-    'lat': '15.4027005',
-    'lng': '74.00778489999999',
-    'offset': '0',
-    'sortBy': 'DELIVERY_TIME',
+    'lat': '15.4027005', #Default (Goa)
+    'lng': '74.00778489999999', #Default (Goa)
+    'offset': '0', #Donot edit
+    'sortBy': 'DELIVERY_TIME', #OPTIONS - {'DELIVERY_TIME', 'RATING', 'costForTwoAsc', 'costForTwoDesc'}
     'page_type': 'DESKTOP_SEE_ALL_LISTING'
 }
 
@@ -69,7 +69,7 @@ while True:
             break
 
     # Stop the loop if there are no more results available or reached the limit
-    if not data or len(res) >= 5000:
+    if not data or len(res) >= 5000: #Edit 5000 to the desired maximum results
         break
 
     # Update the offset for the next iteration
